@@ -3,21 +3,23 @@
     
     你可以假设每个输入都只会有一种答案，同样的元素不能被重用。
 # 代码实现 #
-    INT* TWOSUM(INT* NUMS, INT NUMSSIZE, INT TARGET) {
-       INT *P = (INT*)MALLOC(2*SIZEOF(INT)) ;
-    FOR(INT I=0;I<NUMSSIZE;I++)
+```C
+    int* twosum(int* nums, int numssize, int target) {
+       int *p = (int*)malloc(2*sizeof(int)) ;
+    for(int i=0;i<numssize;i++)
     {
-    FOR(INT J=I+1;(J<NUMSSIZE && J!=I);J++)
+    for(int j=i+1;(j<numssize && j!=i);j++)
     {
-    IF (NUMS[I]+NUMS[J]==TARGET)
+    if (nums[i]+nums[j]==target)
     {
-    P[0]=I;
-    P[1]=J;
+    p[0]=i;
+    p[1]=j;
     }
     }
     }
-    RETURN P;
+    return p;
     }
+```
 # 总结体会 #
     给出一整数序列，并给定两数之和的特定值，从中求解数列中两个数的位
 
